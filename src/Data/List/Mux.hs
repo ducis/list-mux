@@ -1,5 +1,16 @@
+module Data.List.Mux
+    ( -- * Multiplex two lists starting from the left element
+      mux
+      -- * ... or the right element
+    , mux'
+    )
+  where
+
 mux :: [a] -> [a] -> [a]
 mux = muxl
+
+mux' :: [a] -> [a] -> [a]
+mux' = muxr
 
 muxl :: [a] -> [a] -> [a]
 muxl [] [] = []
